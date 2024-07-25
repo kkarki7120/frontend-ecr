@@ -54,4 +54,4 @@ jobs:
             sudo docker pull ${{ secrets.AWS_ACCOUNT_ID }}.dkr.ecr.${{ secrets.AWS_REGION }}.amazonaws.com/kushal-frontend:latest
             sudo docker stop frontend || true
             sudo docker rm frontend || true
-            sudo docker run -d --name frontend -p 3000:80 ${{ secrets.AWS_ACCOUNT_ID }}.dkr.ecr.${{ secrets.AWS_REGION }}.amazonaws.com/frontendapp:latest
+            sudo docker run -d --name frontend -p 3000:80 ${{ secrets.AWS_ACCOUNT_ID }}.dkr.ecr.${{ secrets.AWS_REGION }}.amazonaws.com/kushal-frontend:latest
