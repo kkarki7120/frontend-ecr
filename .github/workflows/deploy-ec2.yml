@@ -66,7 +66,7 @@ jobs:
             echo "region=ap-southeast-1" >> ~/.aws/config
  
             # Login to ECR
-            aws ecr get-login-password --region ap-southeast-1 | docker login --username AWS --password-stdin 654654282708.dkr.ecr.ap-southeast-1.amazonaws.com
+            aws ecr get-login-password --region ap-southeast-1 | sudo docker login --username AWS --password-stdin 654654282708.dkr.ecr.ap-southeast-1.amazonaws.com
 
             # Pull Docker image from ECR
             docker pull 654654282708.dkr.ecr.ap-southeast-1.amazonaws.com/kushal-frontend:latest
