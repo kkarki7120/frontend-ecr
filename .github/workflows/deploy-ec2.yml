@@ -69,9 +69,9 @@ jobs:
             aws ecr get-login-password --region ap-southeast-1 | sudo docker login --username AWS --password-stdin 654654282708.dkr.ecr.ap-southeast-1.amazonaws.com
 
             # Pull Docker image from ECR
-            docker pull 654654282708.dkr.ecr.ap-southeast-1.amazonaws.com/kushal-frontend:latest
+            sudo docker pull 654654282708.dkr.ecr.ap-southeast-1.amazonaws.com/kushal-frontend:latest
 
             # Stop, remove, and run the new Docker container
-            docker stop backend || true
-            docker rm backend || true
-            docker run -d -p 3000:80 --name backend 654654282708.dkr.ecr.ap-southeast-1.amazonaws.com/kushal-frontend:latest
+            sudo docker stop backend || true
+            sudo docker rm backend || true
+            sudo docker run -d -p 3000:80 --name backend 654654282708.dkr.ecr.ap-southeast-1.amazonaws.com/kushal-frontend:latest
