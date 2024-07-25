@@ -72,6 +72,6 @@ jobs:
             sudo docker pull 654654282708.dkr.ecr.ap-southeast-1.amazonaws.com/kushal-frontend:latest
 
             # Stop, remove, and run the new Docker container
-            sudo docker stop backend || true
-            sudo docker rm backend || true
-            sudo docker run -d -p 3000:80 --name backend 654654282708.dkr.ecr.ap-southeast-1.amazonaws.com/kushal-frontend:latest
+            sudo docker stop frontend || true
+            sudo docker rm frontend || true
+            sudo docker run -d -p 3000:80 --name frontend 654654282708.dkr.ecr.ap-southeast-1.amazonaws.com/kushal-frontend:latest
