@@ -72,9 +72,6 @@ jobs:
 
             echo "Pulling latest Docker image..."
             sudo docker pull ${{ secrets.AWS_ACCOUNT_ID }}.dkr.ecr.${{ secrets.AWS_REGION }}.amazonaws.com/kushal-frontend-${{ github.ref_name }}:latest
-
-            echo "Stopping and removing old containers..."
-            sudo docker-compose -f /home/ubuntu/project/dev/frontend-compose.yml down
-
-            echo "Starting new containers..."
-            sudo docker-compose -f /home/ubuntu/project/dev/frontend-compose.yml up -d
+            
+            bash ~project/${{ github.ref_name }}/backend/deploy.sh
+           
