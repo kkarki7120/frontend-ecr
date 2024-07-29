@@ -73,5 +73,5 @@ jobs:
             echo "Pulling latest Docker image..."
             sudo docker pull ${{ secrets.AWS_ACCOUNT_ID }}.dkr.ecr.${{ secrets.AWS_REGION }}.amazonaws.com/kushal-frontend-${{ github.ref_name }}:latest
             
-            bash ~project/${{ github.ref_name }}/backend/deploy.sh
+            bash ~project/${{ github.ref_name }}/${{ github.ref_name }}.sh
            
