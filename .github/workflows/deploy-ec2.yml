@@ -3,8 +3,8 @@ name: Build Docker Image, Push to ECR, and Deploy to EC2
 on:
   push:
     branches:
-      - Dev
-      - QA
+      - dev
+      - qa
       - stage
       - production
 
