@@ -27,6 +27,13 @@ jobs:
         id: login-ecr
         uses: aws-actions/amazon-ecr-login@v1
 
+      - name: Get repository name
+        id: repo-name
+        uses: MariachiBear/get-repo-name-action@v1.1.0
+        with:
+          with-owner: 'false'
+          string-case: 'lowercase'
+
       - name: Build Docker image
         run: |
           docker build -t kushal-frontend-${{ github.ref_name }} .
