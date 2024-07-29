@@ -4,7 +4,7 @@ import Form from"./FormComponent"
 function App() {
   return (
     <div className="App">
-      <header className="App-header">ls
+      <header className="App-header">
 
         <p>
           Good Evening kushal
@@ -15,7 +15,7 @@ function App() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          Hello this is dev
+          Hello this is qa
         </a>
         <Form/>
       </header>
