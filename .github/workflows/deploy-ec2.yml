@@ -67,5 +67,5 @@ jobs:
           key: ${{ secrets.EC2_SSH_KEY }}
           port: ${{ secrets.EC2_PORT }}
           script: |
-            bash ~/project/${{ github.ref_name }}/${{ github.ref_name }}.sh
+            bash ~/project/frontend/${{ github.ref_name }}/${{ github.ref_name }}.sh
            
