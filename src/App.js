@@ -15,7 +15,7 @@ function App() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          Hello this is qa
+          Hello this is stage
         </a>
         <Form/>
       </header>
