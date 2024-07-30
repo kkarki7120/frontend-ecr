@@ -1,6 +1,12 @@
 # build react application
 FROM node:14 as frontend
 
+
+ARG APP_BACKEND_URL
+
+# Set environment variable
+ENV APP_BACKEND_URL=${REACT_APP_BACKEND_URL}
+
 #set working directory to app
 WORKDIR /app
 

@@ -42,7 +42,8 @@ jobs:
 
       - name: Build Docker image
         run: |
-          docker build -t kushal-frontend-${{ github.ref_name }} .
+          BACKEND_URL="http://api-kushal-${{ github.ref_name }}.learn.cloudlaya.com"
+          docker build --build-arg REACT_APP_BACKEND_URL=${BACKEND_URL} -t kushal-frontend-${{ github.ref_name }} .
 
       - name: Tag Docker image
         run: |
