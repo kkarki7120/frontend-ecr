@@ -22,7 +22,7 @@ const FormComponent = () => {
     e.preventDefault();
     console.log('Form data:', formData); // Log form data
     try {
-      const response = await axios.post('http://api-kushal-dev.learn.cloudlaya.com/submit', formData);
+      const response = await axios.post('${process.env.REACT_APP_BACKEND_URL}/submit', formData);
       console.log('Response data:', response.data); // Log response data
       setResponseMessage(response.data.message);
     } catch (error) {
