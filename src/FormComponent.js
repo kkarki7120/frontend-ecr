@@ -1,10 +1,7 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 
-const backendUrl = process.env.APP_BACKEND_URL;
 
-// Print the environment variable value
-console.log(`Backend URL: ${backendUrl}`);
 
 const FormComponent = () => {
   const [formData, setFormData] = useState({
@@ -29,7 +26,7 @@ const FormComponent = () => {
       const response = await axios.post('${process.env.APP_BACKEND_URL}/submit', formData);
       setResponseMessage(response.data.message);
     } catch (error) {
-      setResponseMessage('An error occurred');
+      setResponseMessage('An error occurred',response);
     }
   };
 
