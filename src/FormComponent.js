@@ -23,7 +23,7 @@ const FormComponent = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post('http://1api-kushal-dev.learn.cloudlaya.com/submit', formData);
+      const response = await axios.post('http://api-kushal-dev.learn.cloudlaya.com/submit', formData);
       setResponseMessage(response.data.message);
     } catch (error) {
       setResponseMessage('An error occurred');
