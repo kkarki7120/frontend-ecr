@@ -1,8 +1,6 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 
-
-
 const FormComponent = () => {
   const [formData, setFormData] = useState({
     name: '',
@@ -26,6 +24,7 @@ const FormComponent = () => {
       const response = await axios.post('http://api-kushal-dev.learn.cloudlaya.com/submit', formData);
       setResponseMessage(response.data.message);
     } catch (error) {
+      console.error('Error submitting form:', error);
       setResponseMessage('An error occurred');
     }
   };
