@@ -2,10 +2,11 @@
 FROM node:14 as frontend
 
 
-ARG APP_BACKEND_URL
+# Define build-time argument
+ARG REACT_APP_BACKEND_URL
 
-# Set environment variable
-ENV APP_BACKEND_URL=${REACT_APP_BACKEND_URL}
+# Set environment variable for the container
+ENV REACT_APP_BACKEND_URL=${REACT_APP_BACKEND_URL}
 
 #set working directory to app
 WORKDIR /app
