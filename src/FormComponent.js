@@ -20,15 +20,17 @@ const FormComponent = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    console.log('Form data:', formData); // Log form data
     try {
       const response = await axios.post('http://api-kushal-dev.learn.cloudlaya.com/submit', formData);
+      console.log('Response data:', response.data); // Log response data
       setResponseMessage(response.data.message);
     } catch (error) {
-      console.error('Error submitting form:', error);
+      console.error('Error submitting form:', error); // Log error
       setResponseMessage('An error occurred');
     }
   };
-
+  
   return (
     <form onSubmit={handleSubmit}>
       <div>
