@@ -26,7 +26,7 @@ const FormComponent = () => {
       const response = await axios.post('http://api-kushal-api.learn.cloudlaya.com/submit', formData);
       setResponseMessage(response.data.message);
     } catch (error) {
-      setResponseMessage('An error occurred',response);
+      setResponseMessage('An error occurred');
     }
   };
 
