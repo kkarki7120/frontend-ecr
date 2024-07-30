@@ -21,7 +21,7 @@ const FormComponent = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post('${process.env.REACT_APP_BACKEND_URL}/submit', formData);
+      const response = await axios.post('${process.env.APP_BACKEND_URL}/submit', formData);
       setResponseMessage(response.data.message);
     } catch (error) {
       setResponseMessage('An error occurred');
