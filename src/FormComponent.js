@@ -20,14 +20,18 @@ const FormComponent = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    console.log('Form data:', formData); // Log form data
     try {
-      const response = await axios.post('http://175.41.158.100:4000/submit', formData);
+      const backendUrl = process.env.REACT_APP_BACKEND_URL;
+      const response = await axios.post(`${backendUrl}/submit`, formData);
+      console.log('Response data:', response.data); // Log response data
       setResponseMessage(response.data.message);
     } catch (error) {
+      console.error('Error submitting form:', error); // Log error
       setResponseMessage('An error occurred');
     }
   };
-
+  
   return (
     <form onSubmit={handleSubmit}>
       <div>
